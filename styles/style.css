@@ -1,0 +1,263 @@
+@import "./vars.css";
+@import "./normalize.css";
+@import "./fonts.css";
+@import "./globals.css";
+@import "./utils.css";
+
+.header {
+  padding-top: 30px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo:hover {
+  filter: opacity(75%);
+  transition-duration: var(--transition-duration);
+}
+
+.hero {
+  padding-top: 245px;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.hero__form {
+  position: relative;
+  display: flex;
+  align-items: start;
+  column-gap: 125px;
+}
+
+.hero__form::before {
+  position: absolute;
+  content: "";
+  top: -70%;
+  left: 50%;
+  translate: -105%;
+  width: 175px;
+  aspect-ratio: 1;
+  background: url("../images/hero/email.webp") center/cover no-repeat;
+}
+
+.form__left,
+.form__control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__left {
+  row-gap: 30px;
+}
+
+.form__control {
+  row-gap: 5px;
+}
+
+.form__require {
+  color: var(--color-red);
+}
+
+.form__input {
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+.form__input.invalid {
+  border-color: var(--color-red);
+}
+
+.form__input[class*="invalid"]:focus {
+  outline: 1px solid var(--color-red);
+  box-shadow: 0 0 10px var(--color-red);
+}
+
+.form__input:focus {
+  outline: 1px solid var(--color-green);
+  box-shadow: 0 0 10px var(--color-green);
+}
+
+.form__input::placeholder {
+  color: var(--color-gray-light);
+}
+
+.form__right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.form__area {
+  resize: none;
+  width: 400px;
+  height: 150px;
+}
+
+.form__button {
+  align-self: end;
+  color: var(--color-light);
+  background-color: var(--color-red);
+  border: none;
+  padding: 5px 10px;
+}
+
+.form__button:not([disabled]):hover {
+  color: var(--color-red);
+  background-color: var(--color-light);
+  transition-duration: var(--transition-duration);
+  box-shadow: 5px 10px 10px var(--color-green);
+}
+
+.form__button:not([disabled]):active {
+  translate: 10% 10%;
+  box-shadow: none;
+}
+
+.form__button:disabled {
+  cursor: not-allowed;
+  color: var(--color-red);
+  background-color: var(--color-gray-light);
+}
+
+.comments {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.comments__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 70px;
+}
+
+.comments__title {
+  text-align: center;
+}
+
+.comments__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--color-gray-light);
+  row-gap: 25px;
+  padding-bottom: 50px;
+}
+
+.card__item:nth-child(even) {
+  background-color: var(--color-green-light);
+}
+
+.card__title {
+  color: var(--color-light);
+  background-color: var(--color-gray);
+  padding: 10px 0;
+}
+
+.card__item:nth-child(even) .card__title {
+  background-color: var(--color-green);
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  max-width: 200px;
+  padding-inline: 10px;
+}
+
+.card__email {
+  font-weight: 500;
+}
+
+.card__item:nth-child(even) .card__email {
+  color: var(--color-green);
+}
+
+.footer {
+  padding-block: 15px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.soc1als__list {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.soc1als__link {
+  color: var(--color-gray-light);
+}
+
+.soc1als__link:hover {
+  filter: opacity(25%);
+  transition-duration: var(--transition-duration);
+}
+
+@media (max-width: 768px) {
+  .hero__form {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+  }
+
+  .hero__form::before {
+    top: -32%;
+    left: 50%;
+    translate: -55%;
+    width: 125px;
+  }
+
+  .form__right {
+    row-gap: 25px;
+  }
+
+  .form__button {
+    align-self: center;
+  }
+
+  .comments__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .form__area {
+    width: 300px;
+  }
+
+  .soc1als__list {
+    column-gap: 10px;
+  }
+
+  .comments__list {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .card__description {
+    margin-inline: auto;
+  }
+}

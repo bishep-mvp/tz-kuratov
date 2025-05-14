@@ -1,0 +1,10 @@
+body {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+section {
+  padding-block: var(--section-padding-y);
+}

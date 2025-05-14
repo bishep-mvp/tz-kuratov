@@ -72,8 +72,18 @@
   padding: 10px;
 }
 
+.form__input.invalid {
+  border-color: var(--color-red);
+}
+
+.form__input[class*="invalid"]:focus {
+  outline: 1px solid var(--color-red);
+  box-shadow: 0 0 10px var(--color-red);
+}
+
 .form__input:focus {
-  box-shadow: 0 0 10px var(--color-gray-light);
+  outline: 1px solid var(--color-green);
+  box-shadow: 0 0 10px var(--color-green);
 }
 
 .form__input::placeholder {

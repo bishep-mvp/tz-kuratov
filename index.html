@@ -28,7 +28,7 @@
           Здесь находится форма обратной связи
         </span>
         <div class="hero__inner container">
-          <form class="hero__form form">
+          <form class="hero__form form" data-js-form>
             <div class="form__left">
               <div class="form__control">
                 <label for="name">
@@ -39,7 +39,7 @@
                   class="form__input"
                   id="name"
                   placeholder="Вася"
-                  data-validate="required|alpha"
+                  data-js-name-input
                 />
               </div>
               <div class="form__control">
@@ -51,6 +51,7 @@
                   class="form__input"
                   id="email"
                   placeholder="test@example.com"
+                  data-js-email-input
                 />
               </div>
             </div>
@@ -62,10 +63,13 @@
                 <textarea
                   class="form__input form__area"
                   id="message"
-                  placeholder="Привет! У меня есть предложение..."
+                  placeholder="Сообщение должно содержать не менее 10 символов!"
+                  data-js-message-textarea
                 ></textarea>
               </div>
-              <button class="form__button" disabled>Записать</button>
+              <button class="form__button" disabled data-js-form-button>
+                Записать
+              </button>
             </div>
           </form>
         </div>

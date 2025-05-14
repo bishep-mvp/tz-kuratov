@@ -1,0 +1,17 @@
+:root {
+  --color-light: #ffffff;
+  --color-dark: #2d3035;
+  --color-green: #58ad52;
+  --color-green-light: #dfebdf;
+  --color-red: #c23b3f;
+  --color-gray: #4a596e;
+  --color-gray-light: #e9eef2;
+
+  --border: 1px solid var(--color-gray);
+  --border-radius: 12px;
+
+  --container-width: 1400px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 70px;
+}

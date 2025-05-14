@@ -1,0 +1,26 @@
+@import "./vars.css";
+@import "./normalize.css";
+@import "./globals.css";
+
+.container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.header {
+  padding-top: 30px;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.hero__form {
+    display: flex;
+    align-items: start;
+    column-gap: 125px;
+}

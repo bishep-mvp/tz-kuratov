@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./scripts/app.js"></script>
+    <title>TZ | Kuratov</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="#!" class="header__logo logo">
+          <img
+            src="./icons/logo.svg"
+            alt="Honey Hunters"
+            width="250"
+            height="50"
+            class="logo__image"
+          />
+        </a>
+      </div>
+    </header>
+    <main class="content">
+      <section class="hero">
+        <div class="hero__inner container">
+          <img
+            src="./images/hero/email.webp"
+            alt=""
+            width="125"
+            height="125"
+            class="hero__image"
+          />
+          <form class="hero__form form">
+            <div class="form__left">
+              <div class="form__control">
+                <label for="name">
+                  Имя <span class="form__require">*</span>
+                </label>
+                <input type="text" id="name" placeholder="Вася" />
+              </div>
+              <div class="form__control">
+                <label for="email">
+                  E-Mail <span class="form__require">*</span>
+                </label>
+                <input type="email" id="email" placeholder="test@example.com" />
+              </div>
+            </div>
+            <div class="form__right">
+              <label for="message">
+                Комментарий <span class="form__require">*</span>
+              </label>
+              <textarea
+                id="message"
+                placeholder="Привет! У меня есть предложение..."
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- <section class="comments">
+        <div class="comments__inner container">
+          <h1 class="comments__title">Выводим комментарии</h1>
+          <ul class="comments__list card">
+            <li class="card__item">
+              <h2 class="card__title">Вася</h2>
+              <div class="card__description">
+                <p>vasya@mail.ru</p>
+                <p>Сообщение от Василия Пупкина.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+    </main>
+  </body>
+</html>

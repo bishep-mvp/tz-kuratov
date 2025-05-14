@@ -1,12 +1,8 @@
 @import "./vars.css";
 @import "./normalize.css";
+@import "./fonts.css";
 @import "./globals.css";
-
-.container {
-  max-width: var(--container-width);
-  padding-inline: var(--container-padding-x);
-  margin-inline: auto;
-}
+@import "./utils.css";
 
 .header {
   padding-top: 30px;
@@ -20,7 +16,123 @@
 }
 
 .hero__form {
-    display: flex;
-    align-items: start;
-    column-gap: 125px;
+  display: flex;
+  align-items: start;
+  column-gap: 125px;
+}
+
+.form__left,
+.form__control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__left {
+  row-gap: 30px;
+}
+
+.form__control {
+  row-gap: 5px;
+}
+
+.form__require {
+  color: var(--color-red);
+}
+
+.form__input {
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+.form__input:focus {
+  box-shadow: 0 0 10px var(--color-gray-light);
+}
+
+.form__input::placeholder {
+  color: var(--color-gray-light);
+}
+
+.form__right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.form__area {
+  resize: none;
+  width: 300px;
+  height: 150px;
+}
+
+.form__button {
+  align-self: end;
+  color: var(--color-light);
+  background-color: var(--color-red);
+  border: none;
+  padding: 5px 10px;
+}
+
+.form__button:hover {
+  color: var(--color-red);
+  background-color: var(--color-light);
+  transition-duration: var(--transition-duration);
+  box-shadow: 5px 10px 10px var(--color-green);
+}
+
+.form__button:active {
+  translate: 10% 10%;
+  box-shadow: none;
+}
+
+.comments {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.comments__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 70px;
+}
+
+.comments__title {
+  text-align: center;
+}
+
+.comments__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--color-gray-light);
+  row-gap: 25px;
+  padding-bottom: 50px;
+}
+
+.card__item:nth-child(even) {
+  background-color: var(--color-green-light);
+}
+
+.card__title {
+  color: var(--color-light);
+  background-color: var(--color-gray);
+  padding: 10px 0;
+}
+
+.card__item:nth-child(even) .card__title {
+  background-color: var(--color-green);
+}
+
+.card__description {
+  max-width: 200px;
+  padding-inline: 10px;
 }
